@@ -6,3 +6,11 @@
 // router.route("/").get( controller.list).all(methodNotAllowed)
 
 // module.exports = router;
+
+const router = require("express").Router()
+const controller = require("./recipes.controller")
+
+
+router.route("/").get(controller.list)
+
+module.exports = router;
