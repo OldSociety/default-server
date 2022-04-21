@@ -1,4 +1,12 @@
-// const races = require('../db/01-races.json')
+const recipes = require('../db/01-races.json')
+
+async function list(req, res, next) {
+  res.json({ data: recipes })
+}
+
+module.exports = {
+  list,
+}
 // const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 
 // async function read(req, res, next) {
