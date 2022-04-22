@@ -4,6 +4,12 @@ async function list(req, res, next) {
   res.json({ data: recipes })
 }
 
+async function read(req, res, next) {
+      res.json({ data: res.locals.race });
+    }
+
+
+
 module.exports = {
   list,
 }
@@ -22,7 +28,7 @@ module.exports = {
 //   }
 //   next({
 //     status: 404,
-//     message: `Paste id not found: ${raceId}`,
+//     message: `Race id not found: ${raceId}`,
 //   })
 // }
 
